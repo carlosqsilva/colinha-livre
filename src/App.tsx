@@ -147,7 +147,14 @@ export const  App = () => {
       </div>
 
       <Modal title="Resultados" isOpen={state.modalOpen} toggle={toggleModal}>
-        <Show when={state.searchResults.length > 0} fallback={null}>
+        <Show when={state.searchResults.length > 0} fallback={
+          <>
+            <Alert title="Candidato não aparece na busca?">
+              Abra um <b>issue</b> ou <b>pull request</b> aqui <a class="underline decoration-blue-500 underline-offset-4" target="_blank" href="https://github.com/carlosqsilva/colinha-livre">Colinha-livre repo</a>
+            </Alert>
+            <p class="mt-10 text-center tracking-tighter text-gray-500 md:text-lg dark:text-gray-400">Nenhum Candidato encontrado.</p>
+          </>
+        }>
           <Table data={state.searchResults} header={[
             {key: "candidate", title: "Nome", action: (data: Candidato) => (
               <div class="flex flex-col gap-1">
