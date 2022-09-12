@@ -88,7 +88,7 @@ export const InputDigits = (props: InputDigitsProps) => {
   }
 
   return (
-    <div class="m-auto md:flex md:flex-row md:ml-0 flex-1 gap-2">
+    <div class="flex flex-1 gap-2">
       <For each={props.values} fallback={null}>
         {
           (value, index) => <input 
