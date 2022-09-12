@@ -2,6 +2,7 @@ import {candidates as data} from "./candidates"
 
 import fuzzysort from "fuzzysort";
 
+// @ts-ignored
 data.forEach(d => d.filePrepared = fuzzysort.prepare(d.NM_URNA_CANDIDATO))
 
 console.log("[Worker]: started")
