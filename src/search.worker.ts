@@ -12,7 +12,7 @@ onmessage = (e) => {
 
 	const result = fuzzysort.go(text, data, {
 		key: "NM_URNA_CANDIDATO",
-		limit: 15,
+		limit: 30,
 		threshold: -10000,
 	})
 
